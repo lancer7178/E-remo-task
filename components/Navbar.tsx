@@ -61,7 +61,7 @@ const Navbar = () => {
           <div className="flex items-center gap-2 sm:gap-4">
             {/* Language Selector */}
             <div className="hidden sm:flex items-center space-x-1">
-              <Image src="/saudi.svg" alt="Language" width={18} height={18} />
+              <Image src="/Saudi.svg" alt="Language" width={18} height={18} />
               <select className="text-gray-700 text-xs sm:text-sm bg-transparent border-none cursor-pointer">
                 <option value="ar">العربية</option>
                 <option value="en">English</option>

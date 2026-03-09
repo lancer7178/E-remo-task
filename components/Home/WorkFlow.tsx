@@ -31,33 +31,35 @@ const WorkFlow = () => {
   return (
     <section className="max-w-7xl mx-auto px-4 py-16">
       {/* Header */}
-      <div className="text-center mb-16">
-        <div className="flex text-center justify-center gap-2 mb-4">
-        <h2 className="text-4xl font-bold mb-4">How </h2>
-        <h2 className="text-4xl font-bold text-[#0F3B2D] mb-4">it</h2>
-        <h2 className="text-4xl font-bold mb-4">  Works</h2>
+      <div className="text-center mb-12 sm:mb-16">
+        <div className="flex text-center justify-center gap-1 sm:gap-2 mb-2 sm:mb-4 flex-wrap">
+          <h2 className="text-2xl sm:text-4xl font-bold">How </h2>
+          <h2 className="text-2xl sm:text-4xl font-bold text-[#0F3B2D]">it</h2>
+          <h2 className="text-2xl sm:text-4xl font-bold">Works</h2>
         </div>
-        <p className="text-gray-700 max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base text-gray-700 max-w-2xl mx-auto px-2">
           Coworking & Flexible Office Marketplace | Search & Book Today
         </p>
       </div>
 
       {/* Steps Grid */}
-      <div className="grid md:grid-cols-3 gap-12">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
         {steps.map((step) => (
-          <div key={step.id} className="flex flex-col max-w-xs mx-auto w-full">
+          <div key={step.id} className="flex flex-col mx-auto w-full">
             {/* Step Number Badge */}
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-[#E7CAAA] rounded-full flex items-center justify-center">
-                <span className="font-bold text-gray-800">{step.number}</span>
+            <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#E7CAAA] rounded-full flex items-center justify-center shrink-0">
+                <span className="font-bold text-sm sm:text-base text-gray-800">
+                  {step.number}
+                </span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900">
                 {step.title}
               </h3>
             </div>
 
             {/* Image */}
-            <div className="relative h-56 mb-4 rounded-2xl overflow-hidden">
+            <div className="relative h-40 sm:h-56 mb-3 sm:mb-4 rounded-2xl overflow-hidden">
               <Image
                 src={step.image}
                 alt={step.title}
@@ -68,7 +70,9 @@ const WorkFlow = () => {
             </div>
 
             {/* Description */}
-            <p className="text-sm text-gray-700">{step.description}</p>
+            <p className="text-xs sm:text-sm text-gray-700">
+              {step.description}
+            </p>
           </div>
         ))}
       </div>
